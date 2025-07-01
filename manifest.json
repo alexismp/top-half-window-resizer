@@ -5,8 +5,10 @@
   "description": "One-click resize of the current window to the top half of the primary display.",
   "permissions": [
     "windows",
-    "system.display"
+    "system.display",
+    "storage"
   ],
+  "options_page": "options.html",
   "action": {
     "default_icon": {
       "16": "assets/icon16.png",
