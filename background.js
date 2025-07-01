@@ -15,7 +15,7 @@ chrome.action.onClicked.addListener(async (tab) => {
         const marginTop = workArea.height * 0.03;
 
         const newWidth = Math.round(workArea.width - (marginHorizontal * 2));
-        const newHeight = Math.round((workArea.height / 2) - marginTop);
+        const newHeight = Math.round((workArea.height * 0.65) - marginTop);
         const newLeft = Math.round(workArea.left + marginHorizontal);
         const newTop = Math.round(workArea.top + marginTop);
 
