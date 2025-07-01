@@ -34,3 +34,6 @@ Since this extension is not on the Chrome Web Store, you can load it into Chrome
 6.  **Pin for Easy Access**: Click the puzzle piece icon (Extensions) in your Chrome toolbar. Find the "VideoCallSight" in the list and click the pin icon next to it. This will add the extension's icon to your toolbar for quick one-click access.
 
 Now you can click the icon anytime to open the popup and resize your current window!
+
+---
+*This project was largely developed with the assistance of the [Gemini CLI](https://github.com/google/gemini-cli).*
