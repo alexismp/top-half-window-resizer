@@ -1,9 +1,10 @@
 # VideoCallSight - Chrome Extension
 
-A simple, lightweight Chrome extension to quickly resize the current browser window to occupy the top half of your primary display.
+A simple, lightweight Chrome extension to quickly resize the current browser window to occupy the top half of your primary display for better eye contact when in a video call.
 
 ## Features
 
+-   **Configurable Options**: Customize vertical space and screen margins via extension settings.
 -   **One-Click Resize**: A single button press resizes your window instantly.
 -   **Intelligent Sizing**: Calculates dimensions based on your primary monitor's available work area.
 -   **Smart Margins**: Keeps a 3% margin from the top, left, and right edges for a clean layout.
