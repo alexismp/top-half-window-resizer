@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Resizer</title>
+    <style>
+        :root {
+            --bg-color: #1f2937; /* slate-800 */
+            --text-color: #f3f4f6; /* gray-100 */
+            --text-muted-color: #9ca3af; /* gray-400 */
+            --primary-color: #3b82f6; /* blue-500 */
+            --primary-hover-color: #2563eb; /* blue-600 */
+            --disabled-bg-color: #374151; /* gray-700 */
+            --disabled-text-color: #9ca3af; /* gray-400 */
+            --success-color: #22c55e; /* green-500 */
+            --error-color: #ef4444; /* red-500 */
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 0.85rem;
+            color: var(--text-muted-color);
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+
+        #resizeBtn {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: white;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        #resizeBtn:hover:not(:disabled) {
+            background-color: var(--primary-hover-color);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+        }
+        
+        #resizeBtn:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        #resizeBtn:disabled {
+            background-color: var(--disabled-bg-color);
+            color: var(--disabled-text-color);
+            cursor: not-allowed;
+        }
+
+        #status {
+            margin-top: 16px;
+            height: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .status-success {
+            color: var(--success-color);
+        }
+
+        .status-error {
+            color: var(--error-color);
+        }
+
+        .spinner {
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Top Half Window Resizer</h1>
+    <p>Resize the window to the top half of the screen with a 3% margin.</p>
+    <button id="resizeBtn">Resize Window</button>
+    <div id="status"></div>
+    <script src="popup.js"></script>
+</body>
+</html>

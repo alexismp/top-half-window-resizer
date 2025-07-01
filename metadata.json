@@ -1,0 +1,5 @@
+{
+  "name": "Top Half Window Resizer",
+  "description": "A Chrome extension to resize the current browser window to the top half of the primary display with a configurable margin.",
+  "requestFramePermissions": []
+}
