@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Top Half Window Resizer",
+  "name": "VideoCallSight",
   "version": "1.0",
   "description": "One-click resize of the current window to the top half of the primary display.",
   "permissions": [

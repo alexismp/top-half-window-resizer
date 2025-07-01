@@ -1,4 +1,4 @@
-# Top Half Window Resizer - Chrome Extension
+# VideoCallSight - Chrome Extension
 
 A simple, lightweight Chrome extension to quickly resize the current browser window to occupy the top half of your primary display.
 
@@ -28,8 +28,8 @@ Since this extension is not on the Chrome Web Store, you can load it into Chrome
     -   A file selection dialog will open.
     -   Navigate to and select the folder where you saved the extension files (e.g., `chrome-resizer-extension`). Do **not** select an individual file; select the entire folder.
 
-5.  **Installation Complete**: The "Top Half Window Resizer" extension will now appear in your list of installed extensions.
+5.  **Installation Complete**: The "VideoCallSight" extension will now appear in your list of installed extensions.
 
-6.  **Pin for Easy Access**: Click the puzzle piece icon (Extensions) in your Chrome toolbar. Find the "Top Half Window Resizer" in the list and click the pin icon next to it. This will add the extension's icon to your toolbar for quick one-click access.
+6.  **Pin for Easy Access**: Click the puzzle piece icon (Extensions) in your Chrome toolbar. Find the "VideoCallSight" in the list and click the pin icon next to it. This will add the extension's icon to your toolbar for quick one-click access.
 
 Now you can click the icon anytime to open the popup and resize your current window!
