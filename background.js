@@ -45,11 +45,14 @@ chrome.action.onClicked.addListener(async (tab) => {
         const newLeft = Math.round(workArea.left + marginHorizontal);
         const newTop = Math.round(workArea.top + marginTop);
 
-        // 4. Get the current window
-        const currentWindow = await chrome.windows.getCurrent();
+        // 4. Create a new window with the current tab
+        const newWindow = await chrome.windows.create({
+            tabId: tab.id,
+            type: 'popup' // Use 'popup' for a minimal window
+        });
 
-        // 5. Update the window
-        await chrome.windows.update(currentWindow.id, {
+        // 5. Update the new window
+        await chrome.windows.update(newWindow.id, {
             left: newLeft,
             top: newTop,
             width: newWidth,
