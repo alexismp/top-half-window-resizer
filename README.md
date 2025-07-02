@@ -35,5 +35,9 @@ Since this extension is not on the Chrome Web Store, you can load it into Chrome
 
 Now you can click the icon anytime to open the popup and resize your current window!
 
+### Disclaimer
+
+This list is not an official Google product. Links on this list also are not necessarily to official Google products.
+
 ---
 *This project was largely developed with the assistance of the [Gemini CLI](https://github.com/google-gemini/gemini-cli/).*
