@@ -19,7 +19,7 @@
   "commands": {
     "_execute_action": {
       "suggested_key": {
-        "default": "Ctrl+Shift+H"
+        "default": "Ctrl+Shift+L"
       },
       "description": "Activate the extension"
     }
