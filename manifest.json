@@ -16,6 +16,14 @@
       "128": "assets/icon128.png"
     }
   },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+H"
+      },
+      "description": "Activate the extension"
+    }
+  },
   "background": {
     "service_worker": "background.js"
   },
