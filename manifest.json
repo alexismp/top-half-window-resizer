@@ -2,8 +2,9 @@
   "manifest_version": 3,
   "name": "VideoCallSight",
   "version": "1.0.4",
-  "description": "One-click resize of the current window to the top half of the primary display.",
+  "description": "One-click resize of the current tab to the top half of the primary display.",
   "permissions": [
+    "tabs",
     "windows",
     "system.display",
     "storage"

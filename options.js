@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const enableMarginsCheckbox = document.getElementById('enableMargins');
     const marginPercentageInput = document.getElementById('marginPercentage');
     const marginSettingsDiv = document.getElementById('marginSettings');
+    const enableUrlFilteringCheckbox = document.getElementById('enableUrlFiltering');
     const saveButton = document.getElementById('saveButton');
     const statusDiv = document.getElementById('status');
 
@@ -24,11 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
     chrome.storage.sync.get({
         verticalPercentage: 65,
         enableMargins: true,
-        marginPercentage: 3
+        marginPercentage: 3,
+        enableUrlFiltering: true
     }, (items) => {
         verticalPercentageInput.value = items.verticalPercentage;
         enableMarginsCheckbox.checked = items.enableMargins;
         marginPercentageInput.value = items.marginPercentage;
+        enableUrlFilteringCheckbox.checked = items.enableUrlFiltering;
         toggleMarginSettings();
     });
 
@@ -44,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const verticalPercentage = parseInt(verticalPercentageInput.value);
         const enableMargins = enableMarginsCheckbox.checked;
         const marginPercentage = parseInt(marginPercentageInput.value);
+        const enableUrlFiltering = enableUrlFilteringCheckbox.checked;
 
         if (isNaN(verticalPercentage) || verticalPercentage < 1 || verticalPercentage > 100) {
             setStatus('Error: Vertical percentage must be between 1 and 100.', 'error');
@@ -57,7 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
         chrome.storage.sync.set({
             verticalPercentage: verticalPercentage,
             enableMargins: enableMargins,
-            marginPercentage: marginPercentage
+            marginPercentage: marginPercentage,
+            enableUrlFiltering: enableUrlFiltering
         }, () => {
             setStatus('Settings saved!', 'success');
             setTimeout(() => { statusDiv.textContent = ''; }, 3000);

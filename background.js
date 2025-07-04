@@ -18,8 +18,14 @@ chrome.action.onClicked.addListener(async (tab) => {
         const options = await chrome.storage.sync.get({
             verticalPercentage: 65,
             enableMargins: true,
-            marginPercentage: 3
+            marginPercentage: 3,
+            enableUrlFiltering: true
         });
+
+        // Check if URL filtering is enabled and if the current tab's URL is a Google Meet call
+        if (options.enableUrlFiltering && tab.url && !tab.url.startsWith("https://meet.google.com/")) {
+            return;
+        }
 
         // 1. Get all display information
         const displays = await chrome.system.display.getInfo();
@@ -61,6 +67,6 @@ chrome.action.onClicked.addListener(async (tab) => {
         });
 
     } catch (error) {
-        console.error("Resize failed:", error);
+        // Fail silently
     }
 });
